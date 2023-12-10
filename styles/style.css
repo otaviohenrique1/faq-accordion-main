@@ -11,8 +11,9 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* padding-top: 10%; */
+  align-items: start;
+  position: relative;
+  padding-top: 200px;
   font-size: 16px;
   background-color: var(--light-pink);
   font-family: 'Work Sans', sans-serif;
@@ -31,8 +32,7 @@ body::before {
 }
 
 main {
-  width: 600px;
-  /* height: 100%; */
+  width: 550px;
   max-height: 600px;
   background-color: var(--white);
   z-index: 1;
@@ -46,7 +46,6 @@ main {
   gap: .5em;
   font-size: 3em;
   color: var(--dark-purple);
-  /* margin-bottom: .25em; */
   font-weight: 700;
 }
 
@@ -65,19 +64,16 @@ main {
 }
 
 .active, .accordion:hover {
-  /* background-color: #ccc; */
   color: var(--light-purple);
 }
 
 .accordion:after {
   content: '';
-  /* content: '\002B'; */
   background-image: url(../assets/images/icon-plus.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
   height: 20px;
-  color: #777;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -88,13 +84,11 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   content: "";
-  /* content: "\2212"; */
   width: 20px;
   height: 20px;
 }
 
 .panel {
-  /* padding: 0 18px; */
   background-color: white;
   max-height: 0;
   color: var(--grayish-purple);
@@ -115,5 +109,9 @@ hr {
     background: url("../assets/images/background-pattern-mobile.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  main {
+    width: 300px;
   }
 }
